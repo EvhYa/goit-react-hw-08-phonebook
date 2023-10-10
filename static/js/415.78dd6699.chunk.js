@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[415],{5415:function(e,t,r){r.r(t),r.d(t,{default:function(){return n}});var c=r(184);function n(){return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)("h2",{children:"Welcome to the Contacts App"}),(0,c.jsx)("p",{children:"Place where you can store all your contacts from all devices"})]})}}}]);
+//# sourceMappingURL=415.78dd6699.chunk.js.map
