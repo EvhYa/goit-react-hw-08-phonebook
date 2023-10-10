@@ -1,8 +1,6 @@
 import { GlobalStyle } from './GlobalStyle';
 import { Container } from './App.styled';
-import { useDispatch } from 'react-redux';
-import { lazy, useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { lazy } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Layout } from './Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
@@ -13,12 +11,6 @@ const LoginPage = lazy(() => import('../pages/Login'));
 const HomePage = lazy(() => import('../pages/Home'));
 
 export function App() {
-  const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
-
   return (
     <Container>
       <Toaster />
