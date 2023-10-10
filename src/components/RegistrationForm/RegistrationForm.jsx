@@ -30,7 +30,13 @@ export const RegistrationForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(register({ username, email, password }));
+    dispatch(
+      register({
+        name: username,
+        email: email,
+        password: password,
+      })
+    );
     setUsername('');
     setEmail('');
     setPassword('');
