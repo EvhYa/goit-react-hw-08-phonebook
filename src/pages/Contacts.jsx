@@ -1,12 +1,21 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { PropagateLoader } from 'react-spinners';
-import { getIsLoading } from 'redux/selector';
+import { fetchContacts } from 'redux/contacts/operations';
+import { getIsLoading } from 'redux/contacts/selector';
 
-export default function Contacts () {
+export default function Contacts() {
+  const dispatch = useDispatch();
+
   const loading = useSelector(getIsLoading);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
     <>
       <h1>Phonebook</h1>
@@ -17,4 +26,4 @@ export default function Contacts () {
       {!loading && <ContactList />}
     </>
   );
-};
+}

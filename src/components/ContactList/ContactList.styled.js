@@ -8,10 +8,12 @@ export const Container = styled.div`
 
 export const List = styled.ul`
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  >li {
-    &::before{
+  justify-content: space-around;
+  gap: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  > li {
+    /* &::before{
         content: " ";
         border-radius: 50%;
         width: 10px;
@@ -20,8 +22,12 @@ export const List = styled.ul`
         background-color: yellowgreen;
         text-align: center;
         float: center;
-    }
+    } */
+    width: 300px;
+    /* max-width: 400px; */
+    flex-grow: 1;
     display: flex;
     justify-content: space-between;
   }
+  list-style: none;
 `;

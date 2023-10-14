@@ -24,10 +24,6 @@ export const Header = styled.header`
         color: orangered;
       }
     }
-    & > button {
-      display: block;
-      height: 28px;
-    }
   }
   & > nav {
     display: flex;
@@ -40,10 +36,10 @@ export const Header = styled.header`
       padding: 5px;
       transition: color 250ms ease-in;
       &:hover {
-        color: orangered;
+        color: #1976d2;
       }
       &.active {
-        color: orangered;
+        color: #1976d2;
       }
     }
   }
